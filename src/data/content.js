@@ -203,7 +203,7 @@ export const CONTENT = {
     title: 'Minat & Hobi',
     type: 'interests',
     paragraphs: [
-      'Fokus eksplorasi saya berpusat pada perancangan alur kerja agen AI, optimasi performa web, serta eksperimen visual yang mengututamakan performa'
+      'Fokus eksplorasi saya berpusat pada perancangan alur kerja agen AI, optimasi performa web, serta eksperimen visual yang memadukan estetika dengan efisiensi sistem.',
     ],
     chips: [
       'Full Stack Architecture',
