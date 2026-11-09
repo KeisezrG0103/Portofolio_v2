@@ -84,7 +84,6 @@ export const CONTENT = {
     ],
     chips: [
       'Full Stack Engineering',
-      'Ketelitian Arsitektur',
       'Web Performance',
       'Machine Learning & NLP',
       'Kolaborasi Tim',
