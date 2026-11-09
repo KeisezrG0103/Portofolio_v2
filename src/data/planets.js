@@ -1,0 +1,158 @@
+/**
+ * Centralized solar system & celestial object data for "Cosmic Observatory".
+ * Coordinates, radii, camera distances, legend colors, and model paths.
+ */
+
+export const SUN_DATA = {
+  index: 0,
+  id: 'sun',
+  name: 'Matahari',
+  position: [0, -4, -14],
+  radius: 3.4,
+  collisionRadius: 5,
+  color: '#ffe4b8',
+  file: '/assets/sun.glb',
+  landingCameraPos: [0, 1, 24],
+  landingLookAt: [0, -2, -14],
+};
+
+
+export const PLANETS = [
+  {
+    index: 1,
+    id: 'mercury',
+    name: 'Mercury',
+    section: 'Edukasi',
+    position: [5, 0.65, -42],
+    radius: 1.3,
+    cameraDistance: 8,
+    color: '#9a958d',
+    file: '/assets/mercury.glb',
+    tilt: 0.03,
+    spinSpeed: 0.045,
+  },
+  {
+    index: 2,
+    id: 'venus',
+    name: 'Venus',
+    section: 'Pengalaman',
+    position: [-6, -0.82, -84],
+    radius: 2.2,
+    cameraDistance: 8.5,
+    color: '#d9b27a',
+    file: '/assets/venus.glb',
+    tilt: 0.1,
+    spinSpeed: 0.035,
+  },
+  {
+    index: 3,
+    id: 'earth',
+    name: 'Earth',
+    section: 'Tentang Saya',
+    position: [7, 0.48, -126],
+    radius: 2.6,
+    cameraDistance: 9.5,
+    color: '#4b86e8',
+    file: '/assets/earth.glb',
+    tilt: 0.4,
+    spinSpeed: 0.055,
+    atmosphere: {
+      radius: 2.78,
+      color: '#5b8cff',
+      opacity: 0.14,
+    },
+  },
+  {
+    index: 4,
+    id: 'mars',
+    name: 'Mars',
+    section: 'Proyek',
+    position: [-7, -0.55, -168],
+    radius: 1.7,
+    cameraDistance: 7.5,
+    color: '#c0643a',
+    file: '/assets/mars.glb',
+    tilt: 0.44,
+    spinSpeed: 0.05,
+  },
+  {
+    index: 5,
+    id: 'jupiter',
+    name: 'Jupiter',
+    section: 'Kemampuan',
+    position: [9, 0.92, -210],
+    radius: 5.0,
+    cameraDistance: 20,
+    color: '#d8b894',
+    file: '/assets/jupiter.glb',
+    tilt: 0.05,
+    spinSpeed: 0.075,
+  },
+  {
+    index: 6,
+    id: 'saturn',
+    name: 'Saturn',
+    section: 'Sertifikasi & Prestasi',
+    position: [-9, -0.74, -252],
+    radius: 3.6,
+    cameraDistance: 14,
+    color: '#e3cf9f',
+    file: '/assets/saturn.glb',
+    tilt: 0.35,
+    spinSpeed: 0.06,
+    ring: {
+      innerRadius: 4.6,
+      outerRadius: 7.8,
+      color: '#d9c9a0',
+      rotationX: 1.35,
+      opacity: 0.42,
+    },
+  },
+  {
+    index: 7,
+    id: 'uranus',
+    name: 'Uranus',
+    section: 'Minat & Hobi',
+    position: [8, 0.52, -294],
+    radius: 3.0,
+    cameraDistance: 12,
+    color: '#9fd8dc',
+    file: '/assets/uranus.glb',
+    tilt: 0.2,
+    spinSpeed: 0.048,
+    ring: {
+      innerRadius: 4.0,
+      outerRadius: 4.6,
+      color: '#bfe8ea',
+      rotationX: 1.5,
+      opacity: 0.18,
+    },
+  },
+  {
+    index: 8,
+    id: 'neptune',
+    name: 'Neptune',
+    section: 'Kontak',
+    position: [-6, -0.62, -336],
+    radius: 2.9,
+    cameraDistance: 11,
+    color: '#3a66d6',
+    file: '/assets/neptune.glb',
+    tilt: 0.49,
+    spinSpeed: 0.052,
+  },
+];
+
+export const DECORATIVE_ASSETS = {
+  sky: '/assets/sky_pano_-_milkyway.glb',
+  astronaut: '/assets/Astronaut.glb',
+  satellite: '/assets/satelite_aquarius.glb',
+  probe: '/assets/advanced_composition_explorer.glb',
+  asteroid: '/assets/asteroid_2d_opt.glb',
+  meteor: '/assets/meteor_opt.glb',
+};
+
+export function getPlanetByIndex(index) {
+  if (!index || index < 1 || index > PLANETS.length) return null;
+  return PLANETS[index - 1];
+}
